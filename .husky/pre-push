@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "_/husky.sh"
+
+pnpm run lint
+pnpm run test

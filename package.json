@@ -9,7 +9,7 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
-		"prepare": "cd .. && husky install frontend/.husky",
+		"prepare": "husky install .husky",
 		"lint": "turbo run lint",
 		"lint:style": "turbo run lint:style",
 		"test": "turbo run test",
