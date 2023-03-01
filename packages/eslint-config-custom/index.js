@@ -1,0 +1,36 @@
+module.exports = {
+	root: true,
+	env: {
+		commonjs: true,
+		node: true,
+		browser: true,
+		es6: true,
+		jest: true,
+	},
+	extends: ['eslint:recommended', 'prettier'],
+	rules: {
+		'no-undef': 'off',
+		'no-unused-vars': 'warn',
+		'vue/no-multiple-template-root': 'off',
+		'vue/require-valid-default-prop': 'off',
+		'typescript-eslint/no-explicit-any': 'off',
+	},
+	parserOptions: {
+		sourceType: 'module',
+		ecmaVersion: 2020,
+	},
+	ignorePatterns: [
+		'node_modules',
+		'build',
+		'dist',
+		'.turbo',
+		'.nuxt',
+		'test',
+		'public',
+		'.eslintrc.js',
+		'*.config.[jt]s',
+		'tsconfig.json',
+		'tsconfig.*.json',
+		'tsconfig.eslint.json',
+	],
+}

@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+		"Vue.volar",
+		"Vue.vscode-typescript-vue-plugin",
+		"ms-vscode.vscode-typescript-next"
+  ],
+  "unwantedRecommendations": []
+}

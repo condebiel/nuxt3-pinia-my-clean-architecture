@@ -1,0 +1,15 @@
+{
+  "name": "stylelint-config-custom",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^14.16.1",
+    "stylelint-config-concentric-order": "^5.1.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
