@@ -7,8 +7,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vitest/config'
 
-const customElements = ['image-overlay', 'price-block', 'product-card-slim']
-
 export default defineConfig({
 	build: {
 		sourcemap: true,
@@ -16,15 +14,17 @@ export default defineConfig({
 
 	plugins: [
 		AutoImport({
-			imports: ['vue', 'pinia'],
-		}),
-		vue({
-			template: {
-				compilerOptions: {
-					isCustomElement: (tag) => customElements.includes(tag),
+			imports: [
+				'pinia',
+				'vitest',
+				'vue',
+				{
+					'@/.nuxt/imports': ['defineI18nRoute', 'useNuxtApp', 'useHead'],
 				},
-			},
+			],
 		}),
+
+		vue(),
 	],
 
 	resolve: {
