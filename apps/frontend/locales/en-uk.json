@@ -1,0 +1,10 @@
+{
+	"pages": {
+		"error404": {
+			"pageNotFound": "Page not found"
+		},
+		"home": {
+			"welcome": "Welcome to the home page"
+		}
+	}
+}

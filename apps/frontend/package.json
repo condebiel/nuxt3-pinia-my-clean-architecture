@@ -1,0 +1,30 @@
+{
+	"name": "mojito",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "PORT=3003 nuxt dev",
+		"generate": "nuxt generate",
+		"prepare": "nuxt prepare",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"lint": "vue-tsc --noEmit --composite false && eslint --ext .js,.ts,.vue --fix .",
+		"lint:style": "stylelint \"**/*.scss\" --fix",
+		"test": "vitest --run",
+		"test:watch": "vitest --reporter verbose",
+		"coverage": "vitest run --coverage"
+	},
+	"dependencies": {
+		"@nuxtjs/i18n": "8.0.0-beta.10",
+		"@pinia/nuxt": "^0.4.7",
+		"nuxt": "3.2.3",
+		"pinia": "^2.0.32"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "^0.2.5",
+		"@nuxt/types": "^2.16.0",
+		"@nuxtjs/eslint-config-typescript": "^12.0.0",
+		"@pinia/testing": "^0.0.15",
+		"@vueuse/nuxt": "^9.13.0"
+	}
+}

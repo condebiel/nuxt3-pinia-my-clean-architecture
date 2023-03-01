@@ -1,0 +1,25 @@
+{
+	"extends": "./.nuxt/tsconfig.json",
+	"include": [
+		"env.d.ts",
+		"**/*",
+		"**/*.vue",
+		"**/*.d.ts",
+		"./.nuxt/nuxt.d.ts"
+	],
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"]
+		},
+		"allowJs": true,
+		"composite": true,
+		"types": ["node", "@nuxt/types", "@nuxtjs/i18n"]
+	},
+	"references": [
+		{
+			"path": "./tsconfig.vite.json"
+		}
+	]
+}
