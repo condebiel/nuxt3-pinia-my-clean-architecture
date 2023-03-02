@@ -1,0 +1,99 @@
+.card-simple {
+	$image-width: rem(156px);
+	$image-width-desktop: rem(288px);
+	$image-height: rem(156px);
+	$image-height-desktop: rem(288px);
+	$info-height: rem(104px);
+	$button-height: rem(48px);
+
+	margin: 0;
+	background-color: get-color('white');
+	width: 100%;
+
+	@include mq($from: tablet) {
+		width: $image-width-desktop;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+
+		@include mq($from: tablet) {
+			min-height: $image-height-desktop;
+			max-height: $image-height-desktop;
+		}
+
+		&:hover {
+			cursor: pointer;
+			@include mq($from: tablet) {
+				.card-simple__image {
+					transform: scale(1.2);
+					transition: transform 0.2s ease-in-out;
+				}
+
+				.card-simple__button {
+					bottom: 0;
+					transition: all 0.2s ease-in-out;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__image {
+		transition: transform 0.2s ease-in-out;
+		padding: rem(8px);
+		min-width: $image-width;
+		min-height: $image-height;
+		max-height: $image-height;
+		object-fit: contain;
+
+		@include mq($from: tablet) {
+			padding: rem(16px);
+			min-width: $image-width-desktop;
+			min-height: $image-height-desktop;
+			max-height: $image-height-desktop;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		mix-blend-mode: multiply;
+		background: get-color('cream');
+		width: 100%;
+		height: 100%;
+	}
+
+	&__button {
+		position: absolute;
+		bottom: -$button-height;
+		left: 0;
+		transition: all 0.2s ease-in-out;
+		opacity: 0;
+		z-index: 1;
+		border: 0;
+		background-color: get-color('gold');
+		width: 100%;
+		height: $button-height;
+		color: get-color('white');
+
+		&:hover {
+			background-color: get-color('gold-light');
+		}
+	}
+
+	&__info {
+		display: flex;
+		padding: rem(12px) rem(16px);
+		height: $info-height;
+	}
+
+	&__name-wrapper {
+		display: flex;
+	}
+}
