@@ -17,17 +17,19 @@
 					</div>
 
 					<div class="the-header__center">
-						<ul>
-							<li>
-								<a href="#"> Features </a>
-							</li>
-							<li>
-								<a href="#"> Company </a>
-							</li>
-							<li>
-								<a href="#"> About us </a>
-							</li>
-						</ul>
+						<nav class="the-header__navbar">
+							<ul class="text-medium">
+								<li>
+									<a class="hover-underline" href="#">Features</a>
+								</li>
+								<li>
+									<a class="hover-underline" href="#">Company</a>
+								</li>
+								<li>
+									<a class="hover-underline" href="#">About us</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 
 					<div class="the-header__right">
