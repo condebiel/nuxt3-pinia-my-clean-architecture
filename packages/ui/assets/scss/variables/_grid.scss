@@ -1,0 +1,5 @@
+@include mq-add-breakpoint(mobile-xs, 320px);
+@include mq-add-breakpoint(mobile, 361px);
+@include mq-add-breakpoint(tablet, 769px);
+@include mq-add-breakpoint(desktop, 1200px);
+@include mq-add-breakpoint(desktop-xl, 1401px);

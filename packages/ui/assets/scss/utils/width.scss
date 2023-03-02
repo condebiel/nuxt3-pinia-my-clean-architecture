@@ -1,0 +1,7 @@
+$levels: 20;
+
+@for $i from 0 through $levels {
+	.w-#{$i * 5} {
+		width: $i * 5%;
+	}
+}

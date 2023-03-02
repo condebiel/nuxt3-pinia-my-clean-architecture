@@ -1,0 +1,83 @@
+@import 'normalize';
+@import 'fonts-loader';
+
+@import 'utils/background';
+@import 'utils/texts';
+@import 'utils/flex';
+@import 'utils/margin';
+@import 'utils/padding';
+@import 'utils/visibility';
+@import 'utils/transitions';
+@import 'utils/a11y';
+@import 'utils/sizes';
+@import 'utils/grid';
+@import 'utils/width';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+body {
+	color: get-color('grey-1');
+	font-family: Gotham, Arial, Helvetica, sans-serif;
+	font-size: rem(14px);
+	font-weight: get-font-weight('regular');
+	text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: get-font-weight('medium');
+
+	strong {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+}
+
+h1,
+h2,
+h3 {
+	font-size: rem(18px);
+}
+
+h4 {
+	font-size: rem(16px);
+}
+
+h5 {
+	font-size: rem(14px);
+}
+
+h6 {
+	font-size: rem(10px);
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-size: rem(14px);
+}
+
+figure {
+	margin: 0;
+}

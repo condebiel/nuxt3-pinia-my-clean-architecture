@@ -1,0 +1,33 @@
+@import './mixins/font-mixin';
+
+@include font-face(
+	'Gotham',
+	'https://static.drinksandco.com/fonts9/gotham-300',
+	$weight: 300,
+	$style: null,
+	$exts: eot svg ttf woff woff2
+);
+
+@include font-face(
+	'Gotham',
+	'https://static.drinksandco.com/fonts9/gotham-400',
+	$weight: 400,
+	$style: null,
+	$exts: eot svg ttf woff woff2
+);
+
+@include font-face(
+	'Gotham',
+	'https://static.drinksandco.com/fonts9/gotham-500',
+	$weight: 500,
+	$style: null,
+	$exts: eot svg ttf woff woff2
+);
+
+@include font-face(
+	'Gotham',
+	'https://static.drinksandco.com/fonts9/gotham-700',
+	$weight: 700,
+	$style: null,
+	$exts: eot svg ttf woff woff2
+);

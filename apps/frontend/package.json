@@ -18,7 +18,8 @@
 		"@nuxtjs/i18n": "8.0.0-beta.10",
 		"@pinia/nuxt": "^0.4.7",
 		"nuxt": "3.2.3",
-		"pinia": "^2.0.32"
+		"pinia": "^2.0.32",
+		"ui": "*"
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "^0.2.5",

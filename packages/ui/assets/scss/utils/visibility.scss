@@ -1,0 +1,29 @@
+.desktop-only {
+	@include mq($until: desktop) {
+		display: none !important;
+	}
+}
+
+.device-only {
+	@include mq($from: desktop) {
+		display: none !important;
+	}
+}
+
+.tablet-only {
+	@include mq($from: mobile, $until: desktop) {
+		display: none !important;
+	}
+}
+
+.mobile-only {
+	@include mq($from: tablet) {
+		display: none !important;
+	}
+}
+
+.hide-on-mobile {
+	@include mq($until: tablet) {
+		display: none !important;
+	}
+}

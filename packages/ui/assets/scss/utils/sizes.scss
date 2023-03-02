@@ -1,0 +1,6 @@
+@each $profile, $size in $sizes {
+	.size-#{$profile} {
+		width: #{$size};
+		height: #{$size};
+	}
+}

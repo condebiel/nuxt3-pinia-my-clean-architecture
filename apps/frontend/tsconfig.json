@@ -14,7 +14,7 @@
 			"@/*": ["./*"]
 		},
 		"allowJs": true,
-		"composite": true,
+		"composite": false,
 		"types": ["node", "@nuxt/types", "@nuxtjs/i18n"]
 	},
 	"references": [

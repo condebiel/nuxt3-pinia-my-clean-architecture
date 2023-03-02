@@ -1,0 +1,59 @@
+$levels: 10;
+
+.m-auto {
+	margin: auto;
+}
+
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.my-auto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+@for $i from 0 through $levels {
+	.m-#{$i} {
+		margin: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.mt-#{$i} {
+		margin-top: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.mr-#{$i} {
+		margin-right: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.mb-#{$i} {
+		margin-bottom: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.ml-#{$i} {
+		margin-left: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.mx-#{$i} {
+		margin-right: $i * 0.25rem;
+		margin-left: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.my-#{$i} {
+		margin-top: $i * 0.25rem;
+		margin-bottom: $i * 0.25rem;
+	}
+}

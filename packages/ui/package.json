@@ -1,0 +1,13 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint components --fix",
+    "lint:style": "stylelint \"**/*.scss\" --fix"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.0.16"
+  }
+}

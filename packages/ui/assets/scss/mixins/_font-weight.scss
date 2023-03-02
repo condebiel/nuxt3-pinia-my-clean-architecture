@@ -1,0 +1,18 @@
+$weights: (
+	thin: 100,
+	light: 300,
+	regular: 400,
+	medium: 500,
+	semibold: 600,
+	bold: 700,
+	semiblack: 800,
+	black: 900,
+);
+
+@function get-font-weight($w: regular) {
+	@return if(
+		map-has-key($weights, $w),
+		map-get($weights, $w),
+		map-get($weights, 'regular')
+	);
+}

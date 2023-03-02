@@ -1,0 +1,121 @@
+.ripple {
+	transition: background 0.8s;
+	background-position: center;
+
+	&:hover {
+		background: get-color('white')
+			radial-gradient(circle, transparent 1%, get-color('white') 1%) center /
+			15000%;
+	}
+
+	&:active {
+		transition: background 0s;
+		background-color: rgb(33 150 233 / 35%);
+		background-size: 100%;
+	}
+}
+
+.smooth {
+	&-enter-active,
+	&-leave-active {
+		transition: all ease-in-out 0.3s;
+		max-height: rem(200px);
+	}
+
+	&-enter,
+	&-leave-to {
+		opacity: 0;
+		max-height: 0;
+	}
+}
+
+.fadeInOut {
+	&-enter,
+	&-leave-to {
+		opacity: 0;
+	}
+
+	&-enter-active,
+	&-leave-active {
+		transition: opacity 0.3s;
+	}
+}
+
+.wobble {
+	&-enter-active {
+		animation: wobble 0.5s ease;
+	}
+
+	&-leave-to {
+		transform: translateY(-8px);
+		opacity: 0;
+	}
+
+	&-leave-active {
+		transition: all 0.3s ease;
+	}
+}
+
+@keyframes wobble {
+	0% {
+		transform: translateY(-8px);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	60% {
+		transform: translateX(8px);
+		opacity: 1;
+	}
+
+	70% {
+		transform: translateX(-8px);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translateX(4px);
+		opacity: 1;
+	}
+
+	90% {
+		transform: translateX(-4px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.collapse {
+	&-enter-from {
+		transform: translateY(-60px);
+		opacity: 0;
+	}
+
+	&-enter-to {
+		transform: translateY(0);
+	}
+
+	&-enter-active {
+		transition: all 0.3s ease;
+	}
+
+	&-leave-from {
+		opacity: 1;
+	}
+
+	&-leave-to {
+		opacity: 0;
+	}
+
+	&-leave-active {
+		transition: all 0.3s ease;
+	}
+}

@@ -1,0 +1,42 @@
+$colors: (
+	"accent-blue": #366be4,
+	"alert": #dc143c,
+	"alert-dark": #b13,
+	"alert-light": #fcdae1,
+	"background-blue": #f2f5fa,
+	"black": #000,
+	"cream": #f8f6f5,
+	"deep-blue": #24376e,
+	"drinksco-blue": #0048bb,
+	"gold": #b29569,
+	"gold-light": #cec1b6,
+	"grey-1": #27333a,
+	"grey-2": #6a7682,
+	"grey-3": #8492a0,
+	"grey-4": #a9b6c8,
+	"grey-5": #d4dae4,
+	"grey-6": #eee,
+	"info": #0048bb,
+	"info-dark": #24376e,
+	"info-light": #dae4f7,
+	"light-blue": #ecf1fb,
+	"pernod-ricard": #0c294e,
+	"secondary-18": #9fc2ec,
+	"secondary-23": #e2eaf9,
+	"success": #59c69e,
+	"success-dark": #349873,
+	"success-light": #e8f7f2,
+	"warning": #ffcd78,
+	"warning-dark": #b05600,
+	"warning-light": #ffeccc,
+	"whatsapp": #1ebea5,
+	"white": #fff,
+);
+$color-primary: get-color("drinksco-blue");
+
+// export in order to use this variables from a JS file
+:export {
+	@each $name, $color in $colors {
+		#{$name}: $color;
+	}
+}

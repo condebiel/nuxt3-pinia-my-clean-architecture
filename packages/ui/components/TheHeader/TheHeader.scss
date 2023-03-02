@@ -1,0 +1,29 @@
+.the-header {
+	box-shadow: $box-shadow;
+
+	&-container {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		min-height: rem(50px);
+	}
+
+	&__logo {
+		text-align: -webkit-center;
+	}
+
+	&__left {
+		width: fit-content;
+		min-width: rem(40px);
+	}
+
+	&__center {
+		width: 100%;
+		max-width: rem(720px);
+	}
+
+	&__right {
+		width: fit-content;
+		min-width: rem(40px);
+	}
+}

@@ -37,17 +37,17 @@ export default defineNuxtConfig({
 		langDir: '/locales',
 	},
 
-	// css: ['@/assets/scss/global.scss'],
+	css: ['@/assets/scss/main.scss'],
 
-	// vite: {
-	// 	css: {
-	// 		preprocessorOptions: {
-	// 			scss: {
-	// 				additionalData: '@import "celler/assets/scss/celler-tokens";',
-	// 			},
-	// 		},
-	// 	},
-	// },
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: '@import "ui/assets/scss/ui-tokens";',
+				},
+			},
+		},
+	},
 
 	typescript: {
 		typeCheck: true,

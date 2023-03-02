@@ -28,7 +28,6 @@ module.exports = {
 		{
 			files: ['src/**/*.ts'],
 			rules: {
-				'hexagonal-architecture/enforce': ['error'],
 				'@typescript-eslint/consistent-type-imports': 1,
 			},
 		},

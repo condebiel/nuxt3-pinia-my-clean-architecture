@@ -1,0 +1,45 @@
+$levels: 10;
+
+@for $i from 0 through $levels {
+	.p-#{$i} {
+		padding: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.pt-#{$i} {
+		padding-top: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.pr-#{$i} {
+		padding-right: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.pb-#{$i} {
+		padding-bottom: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.pl-#{$i} {
+		padding-left: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.px-#{$i} {
+		padding-right: $i * 0.25rem;
+		padding-left: $i * 0.25rem;
+	}
+}
+
+@for $i from 0 through $levels {
+	.py-#{$i} {
+		padding-top: $i * 0.25rem;
+		padding-bottom: $i * 0.25rem;
+	}
+}

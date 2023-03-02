@@ -1,14 +1,14 @@
 <template>
 	<main class="main">
-		<header class="header-default">
-			<h1>This is the header</h1>
-		</header>
+		<TheHeader class="header-container" />
 
 		<slot />
 	</main>
 </template>
 
 <script lang="ts" setup>
+import { TheHeader } from 'ui'
+
 useHead({
 	title: 'Model management',
 	meta: [

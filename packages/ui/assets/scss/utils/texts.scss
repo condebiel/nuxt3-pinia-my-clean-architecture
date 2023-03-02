@@ -1,0 +1,227 @@
+/**
+* Headings
+**/
+
+.heading-xlarge {
+	text-transform: uppercase;
+	line-height: 115%;
+	font-size: rem(32px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(40px);
+	}
+}
+
+.heading-large {
+	text-transform: uppercase;
+	line-height: 115%;
+	font-size: rem(24px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(32px);
+	}
+}
+
+.heading-medium {
+	text-transform: uppercase;
+	line-height: 115%;
+	font-size: rem(16px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(24px);
+	}
+}
+
+.heading-small {
+	text-transform: uppercase;
+	line-height: 115%;
+	letter-spacing: rem(0.5px);
+	font-size: rem(14px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(16px);
+	}
+}
+
+.heading-xsmall {
+	text-transform: uppercase;
+	line-height: 120%;
+	letter-spacing: rem(0.5px);
+	font-size: rem(12px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(14px);
+	}
+}
+
+.heading-2-xsmall {
+	text-transform: uppercase;
+	line-height: 120%;
+	letter-spacing: rem(0.5px);
+	font-size: rem(10px);
+	font-weight: get-font-weight('medium');
+
+	@include mq($from: tablet) {
+		font-size: rem(12px);
+	}
+}
+
+/**
+* Texts
+**/
+
+.text-medium {
+	line-height: 135%;
+	font-size: rem(16px);
+}
+
+.text-medium-medium {
+	@extend .text-medium;
+
+	font-weight: get-font-weight('medium');
+}
+
+.text-small {
+	line-height: 135%;
+	font-size: rem(14px);
+}
+
+.text-small-medium {
+	@extend .text-small;
+
+	font-weight: get-font-weight('medium');
+}
+
+.text-xsmall {
+	line-height: 135%;
+	font-size: rem(12px);
+}
+
+.text-xsmall-medium {
+	@extend .text-xsmall;
+
+	font-weight: get-font-weight('medium');
+}
+
+.text-2-xsmall {
+	line-height: 135%;
+	font-size: rem(10px);
+}
+
+.text-2-xsmall-medium {
+	@extend .text-2-xsmall;
+
+	font-weight: get-font-weight('medium');
+}
+
+/**
+* Links
+**/
+
+.link-large {
+	width: fit-content;
+	text-decoration: underline;
+	font-size: rem(14px);
+
+	@include mq($from: tablet) {
+		font-size: rem(16px);
+	}
+}
+
+.link-medium {
+	width: fit-content;
+	text-decoration: underline;
+	font-size: rem(12px);
+
+	@include mq($from: tablet) {
+		font-size: rem(14px);
+	}
+}
+
+.link-small {
+	width: fit-content;
+	text-decoration: underline;
+	font-size: rem(10px);
+
+	@include mq($from: tablet) {
+		font-size: rem(12px);
+	}
+}
+
+/**
+* Transforms
+**/
+
+@each $name, $color in $colors {
+	.text-#{$name} {
+		color: #{$color};
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.capitalize-first {
+	text-transform: lowercase;
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.text-center {
+	text-align: center;
+	text-align: -webkit-center;
+}
+
+.two-lines {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	@supports (-webkit-line-clamp: 2) {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+}
+
+.three-lines {
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	@supports (-webkit-line-clamp: 3) {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+}

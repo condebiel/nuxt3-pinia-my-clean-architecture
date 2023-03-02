@@ -1,0 +1,5 @@
+@import "../functions/rem";
+
+$box-shadow: 4px 2px 13px -5px rgb(0 0 0 / 20%);
+$border-radius: rem(4px);
+$border: rem(1px) solid get-color("grey-5");

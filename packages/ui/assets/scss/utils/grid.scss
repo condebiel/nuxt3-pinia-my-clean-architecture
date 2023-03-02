@@ -1,0 +1,40 @@
+.container-width {
+	align-self: center;
+	margin: 0 auto;
+	width: 100%;
+	@include mq($from: desktop) {
+		width: rem(1200px);
+	}
+}
+
+.container-y-margins {
+	margin-top: rem(16px);
+	margin-bottom: rem(32px);
+	@include mq($from: tablet) {
+		margin-top: rem(40px);
+		margin-bottom: rem(56px);
+	}
+}
+
+.container-x-margins {
+	margin-right: rem(16px);
+	margin-left: rem(16px);
+	@include mq($from: tablet) {
+		margin-right: rem(40px);
+		margin-left: rem(40px);
+	}
+
+	@include mq($from: desktop) {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.page-container {
+	@extend .container-width;
+	@extend .container-y-margins;
+
+	> * {
+		@extend .container-x-margins;
+	}
+}
