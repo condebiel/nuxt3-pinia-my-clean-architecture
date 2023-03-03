@@ -1,6 +1,6 @@
 # My approach to Clean Architecture with Nuxt3 + Pinia
 
-This is simple application made with [Vue3](https://vuejs.org/) + [Nuxt3](https://nuxt.com) + [Pinia](https://pinia.vuejs.org/) reflecting my opinionated a approach towards a Clean Architecture. The idea behind it's to separate all the business logic of our application from the framework or state management libraries. Whit this way we don't depend on them if in the future we decide to change to a different library or framework.
+This is simple application made with [Vue3](https://vuejs.org/) + [Nuxt3](https://nuxt.com) + [Pinia](https://pinia.vuejs.org/) reflecting my opinionated a approach towards a Clean Architecture. The idea would be to separate the entire business logic from the framework and the state so we don't create a dependency if we want to change the approach or the framework in the future.
 
 The application itself is a simple page with a list of profiles obtained from a mock api, which are stored in localStorage. If we access to the detail of a profile, it will give us the opportunity to edit the name of that model. As the application persists the changes in localStorage, if we refresh the page it will keep the new names. 
 ## What's inside?
