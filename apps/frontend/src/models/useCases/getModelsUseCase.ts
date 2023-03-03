@@ -1,10 +1,9 @@
-import type { AxiosInstance } from 'axios'
+import { APIAxios } from '@/shared/AxiosFactory'
+
 import type { ModelsState } from '../domain/ModelsState'
 import type { Model } from '../domain/Model'
 
-export const getModelsUseCase = async (
-	axios: AxiosInstance
-): Promise<ModelsState> => {
+export const getModelsUseCase = async (): Promise<ModelsState> => {
 	try {
 		const stored: ModelsState = JSON.parse(
 			localStorage.getItem('models-store') as string
@@ -14,7 +13,7 @@ export const getModelsUseCase = async (
 			return stored
 		}
 
-		const { data } = await axios.get('/models')
+		const { data } = await APIAxios.get('/models')
 		const models = data as Model[]
 
 		const modelsState: ModelsState = {

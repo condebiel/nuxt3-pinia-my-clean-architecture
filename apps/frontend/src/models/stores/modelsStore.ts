@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, type Ref } from 'vue'
 
-import { APIAxios } from '@/shared/AxiosFactory'
-
 import type { ModelsState } from '../domain/ModelsState'
 import { getModelsUseCase } from '../useCases/getModelsUseCase'
 
@@ -46,7 +44,7 @@ export const useModelsStore = defineStore('models', () => {
 	}
 
 	const getModels = async () => {
-		modelsState.value = await getModelsUseCase(APIAxios)
+		modelsState.value = await getModelsUseCase()
 	}
 
 	return {
