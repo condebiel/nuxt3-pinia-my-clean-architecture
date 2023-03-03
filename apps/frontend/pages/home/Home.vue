@@ -2,7 +2,7 @@
 	<div>
 		<div class="products-list products page-container">
 			<h1 class="products-list__heading" v-text="$t('pages.home.welcome')" />
-			<div class="products-list__grid">
+			{{ modelsState.kind }}
 			<div
 				v-if="modelsState.kind === 'ErrorModelState'"
 				class="products-list__error"
@@ -22,12 +22,31 @@
 				class="products-list__grid"
 			>
 				<CardSimple
-					v-for="model in modelsState.models"
+					v-for="model in paginatedData"
 					:button-text="model.name"
 					:image-url="model.avatar"
 					:name="model.name"
 					:url="`/models/${model.id}`"
 				/>
+			</div>
+			<div
+				v-if="modelsState.kind === 'LoadedModelState'"
+				class="products-list__pagination"
+			>
+				<CustomButton class="custom-button--primary" @click="backPage">
+					prev
+				</CustomButton>
+				<CustomButton
+					v-for="item in Math.ceil(modelsState.models.length / itemsPerPage)"
+					class="custom-button--primary hide-mobile"
+					:key="item"
+					@click="() => goToPage(item)"
+				>
+					{{ item }}
+				</CustomButton>
+				<CustomButton class="custom-button--primary" @click="nextPage">
+					next
+				</CustomButton>
 			</div>
 		</div>
 	</div>
