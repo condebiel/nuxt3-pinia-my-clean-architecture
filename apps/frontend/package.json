@@ -1,5 +1,5 @@
 {
-	"name": "mojito",
+	"name": "frontend",
 	"private": true,
 	"scripts": {
 		"build": "nuxt build",

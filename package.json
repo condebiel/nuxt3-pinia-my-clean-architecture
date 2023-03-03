@@ -1,7 +1,11 @@
 {
 	"name": "model-management",
 	"version": "1.0.0",
-	"private": true,
+	"private": false,
+	"author": {
+		"name": "Biel Conde",
+		"email": "bielbcm@gmail.com"
+	},
 	"workspaces": [
 		"apps/*",
 		"packages/*"
