@@ -1,37 +1,37 @@
 <template>
 	<div>
-		<div class="products-list products page-container">
-			<h1 class="products-list__heading" v-text="$t('pages.home.welcome')" />
+		<div class="model-list page-container">
+			<h1 class="model-list__heading" v-text="$t('pages.home.welcome')" />
 			{{ modelsState.kind }}
 			<div
 				v-if="modelsState.kind === 'ErrorModelState'"
-				class="products-list__error"
+				class="model-list__error"
 			>
 				<p v-text="$t('pages.home.loagingError')" />
 			</div>
 
 			<div
 				v-if="modelsState.kind === 'LoadingModelState'"
-				class="products-list__loading"
+				class="model-list__loading"
 			>
 				<img src="@/assets/img/loading-spinner.gif" />
 			</div>
 
 			<div
 				v-if="modelsState.kind === 'LoadedModelState'"
-				class="products-list__grid"
+				class="model-list__grid"
 			>
 				<CardSimple
 					v-for="model in paginatedData"
 					:button-text="model.name"
 					:image-url="model.avatar"
 					:name="model.name"
-					:url="`/models/${model.id}`"
+					:url="`/model/${model.id}`"
 				/>
 			</div>
 			<div
 				v-if="modelsState.kind === 'LoadedModelState'"
-				class="products-list__pagination"
+				class="model-list__pagination"
 			>
 				<CustomButton class="custom-button--primary" @click="backPage">
 					prev
@@ -76,7 +76,7 @@ onBeforeMount(async () => {
 </script>
 
 <style lang="scss">
-.products-list {
+.model-list {
 	$width: rem(160px);
 	$width-desktop: rem(288px);
 
