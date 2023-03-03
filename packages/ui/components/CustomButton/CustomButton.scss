@@ -1,0 +1,87 @@
+@mixin button-color($color: '', $background: '', $border-color: '') {
+	transition: ease-in-out all 0.2s;
+	border-color: $border-color;
+	background-color: $background;
+	color: $color;
+
+	.dc-icon-path {
+		transition: ease-in-out all 0.2s;
+		fill: $color;
+	}
+}
+
+button {
+	outline: inherit;
+	border: 1;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	color: inherit;
+}
+
+.custom-button {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid get-color('gold');
+	padding: 0 rem(4px);
+	width: 100%;
+	min-width: fit-content;
+	font-weight: get-font-weight('regular');
+
+	&:disabled {
+		cursor: not-allowed;
+
+		img {
+			filter: grayscale(1);
+		}
+	}
+
+	&--size {
+		&-small {
+			padding: rem(8px);
+			min-height: rem(32px);
+			font-size: rem(12px);
+		}
+
+		&-medium {
+			padding: rem(7px) rem(12px);
+			min-height: rem(40px);
+			font-size: rem(14px);
+		}
+
+		&-large {
+			padding: rem(12px);
+			min-height: rem(48px);
+			font-size: rem(14px);
+		}
+	}
+
+	&--primary {
+		&:hover {
+			@include button-color(get-color('deep-blue'), get-color('cream'));
+		}
+
+		&:active {
+			@include button-color(
+				get-color('drinksco-blue'),
+				get-color('gold-light')
+			);
+		}
+
+		&:disabled {
+			@include button-color(get-color('grey-1'), get-color('grey-2'));
+		}
+	}
+
+	@keyframes button-loading-spinner {
+		from {
+			transform: rotate(0turn);
+		}
+
+		to {
+			transform: rotate(1turn);
+		}
+	}
+}
