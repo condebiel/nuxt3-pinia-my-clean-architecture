@@ -4,6 +4,7 @@
 			"pageNotFound": "Page not found"
 		},
 		"home": {
+			"loagingError": "It seems that something has gone wrong",
 			"welcome": "Welcome to the home page"
 		}
 	}
