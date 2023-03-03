@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint components --fix",
-    "lint:style": "stylelint \"**/*.scss\" --fix"
-  },
-  "dependencies": {
-    "@heroicons/vue": "^2.0.16"
+    "lint:style": "stylelint \"**/*.scss\" --fix",
+    "test": "vitest --run",
+		"test:watch": "vitest --reporter verbose"
   }
 }
