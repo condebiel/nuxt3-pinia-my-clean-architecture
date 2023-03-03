@@ -2,7 +2,6 @@
 	<div>
 		<div class="model-list page-container">
 			<h1 class="model-list__heading" v-text="$t('pages.home.welcome')" />
-			{{ modelsState.kind }}
 			<div
 				v-if="modelsState.kind === 'ErrorModelState'"
 				class="model-list__error"
@@ -39,6 +38,7 @@
 				<CustomButton
 					v-for="item in Math.ceil(modelsState.models.length / itemsPerPage)"
 					class="custom-button--primary hide-mobile"
+					:disabled="currentPage === item"
 					:key="item"
 					@click="() => goToPage(item)"
 				>
@@ -67,7 +67,8 @@ defineI18nRoute({
 })
 
 const modelsStore = useModelsStore()
-const { itemsPerPage, modelsState, paginatedData } = storeToRefs(modelsStore)
+const { currentPage, itemsPerPage, modelsState, paginatedData } =
+	storeToRefs(modelsStore)
 const { getModels, backPage, nextPage, goToPage } = modelsStore
 
 onBeforeMount(async () => {

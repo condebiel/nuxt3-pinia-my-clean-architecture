@@ -9,7 +9,6 @@ describe('Home Page', () => {
 	it('should render page title', () => {
 		const modelsState: ModelsState = {
 			kind: 'LoadingModelState',
-			total: 0,
 		}
 		const { getByText } = componentBuilder({ modelsState })
 
@@ -19,7 +18,6 @@ describe('Home Page', () => {
 	it('should render error message if something went wrong', () => {
 		const modelsState: ModelsState = {
 			kind: 'ErrorModelState',
-			total: 0,
 		}
 		const { getByText } = componentBuilder({ modelsState })
 
@@ -33,7 +31,6 @@ describe('Home Page', () => {
 				{ id: 'someId', name: 'Model', isModerated: false, avatar: '' },
 				{ id: 'someId', name: 'Model', isModerated: false, avatar: '' },
 			],
-			total: 2,
 		}
 		const { getAllByText } = componentBuilder({ modelsState })
 

@@ -17,19 +17,7 @@
 					</div>
 
 					<div class="the-header__center">
-						<nav class="the-header__navbar">
-							<ul class="text-medium">
-								<li>
-									<a class="hover-underline" href="#">Features</a>
-								</li>
-								<li>
-									<a class="hover-underline" href="#">Company</a>
-								</li>
-								<li>
-									<a class="hover-underline" href="#">About us</a>
-								</li>
-							</ul>
-						</nav>
+						<nav class="the-header__navbar"></nav>
 					</div>
 
 					<div class="the-header__right">

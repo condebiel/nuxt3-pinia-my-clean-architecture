@@ -71,7 +71,7 @@ button {
 		}
 
 		&:disabled {
-			@include button-color(get-color('grey-1'), get-color('grey-2'));
+			@include button-color(get-color('grey-1'), get-color('gold-light'));
 		}
 	}
 
