@@ -6,6 +6,11 @@
 		"home": {
 			"loagingError": "It seems that something has gone wrong",
 			"welcome": "Welcome to the home page"
+		},
+		"modelDetail": {
+			"save": "Save",
+			"edit": "Edit",
+			"editLabel": "Edit model name:"
 		}
 	}
 }

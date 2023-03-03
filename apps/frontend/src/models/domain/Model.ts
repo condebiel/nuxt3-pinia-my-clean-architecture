@@ -1,6 +1,6 @@
 export type Model = {
 	id: string
-	isModerated: boolean
+	isModerated?: boolean
 	avatar: string
 	age?: number
 	eyes?: string

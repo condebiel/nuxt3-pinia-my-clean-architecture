@@ -19,7 +19,6 @@ export const getModelsUseCase = async (): Promise<ModelsState> => {
 		const modelsState: ModelsState = {
 			kind: 'LoadedModelState',
 			models: models,
-			total: models.length,
 		}
 
 		localStorage.setItem('models-store', JSON.stringify(modelsState))
@@ -28,7 +27,6 @@ export const getModelsUseCase = async (): Promise<ModelsState> => {
 	} catch (e: unknown) {
 		return {
 			kind: 'ErrorModelState',
-			total: 0,
 		}
 	}
 }
