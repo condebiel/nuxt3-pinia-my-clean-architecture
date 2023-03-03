@@ -5,7 +5,7 @@
 				<div class="the-header-container container-x-margins flex py-4">
 					<div class="the-header__left flex">
 						<div class="the-header__logo">
-							<nuxt-link to="#">
+							<nuxt-link to="/">
 								<img
 									width="100"
 									height="36"
