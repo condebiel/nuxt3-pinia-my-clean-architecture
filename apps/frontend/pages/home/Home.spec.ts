@@ -1,40 +1,54 @@
 import { createTestingPinia } from '@pinia/testing'
+import { render } from '@/test/test.utils'
 
 import { ModelsState } from '@/src/models/domain/ModelsState'
-import { render } from '@/test/test.utils'
 
 import Home from './Home.vue'
 
 describe('Home Page', () => {
 	it('should render page title', () => {
-		const mockStore: ModelsState = {
+		const modelsState: ModelsState = {
 			kind: 'LoadingModelState',
 			total: 0,
 		}
-		const { getByText } = componentBuilder({ mockStore })
+		const { getByText } = componentBuilder({ modelsState })
 
 		expect(getByText('pages.home.welcome')).toBeVisible()
 	})
 
-	it.skip('should render error message if something went wrong', () => {
-		const mockStore: ModelsState = {
+	it('should render error message if something went wrong', () => {
+		const modelsState: ModelsState = {
 			kind: 'ErrorModelState',
 			total: 0,
 		}
-		const { getByText } = componentBuilder({ mockStore })
+		const { getByText } = componentBuilder({ modelsState })
 
 		expect(getByText('pages.home.loagingError')).toBeVisible()
 	})
+
+	it('should render two items with name to times per item', () => {
+		const modelsState: ModelsState = {
+			kind: 'LoadedModelState',
+			models: [
+				{ id: 'someId', name: 'Model', isModerated: false, avatar: '' },
+				{ id: 'someId', name: 'Model', isModerated: false, avatar: '' },
+			],
+			total: 2,
+		}
+		const { getAllByText } = componentBuilder({ modelsState })
+
+		expect(getAllByText('Model')).toHaveLength(4)
+	})
 })
 
-const componentBuilder = (store = {}) => {
+const componentBuilder = (state = {}) => {
 	const component = render(Home, {
 		global: {
 			plugins: [
 				createTestingPinia({
 					initialState: {
 						models: {
-							...store,
+							...state,
 						},
 					},
 				}),
